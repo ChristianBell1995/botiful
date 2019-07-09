@@ -5,6 +5,8 @@ defmodule Botiful do
 
   use Plug.Router
 
+  plug Plug.Logger
+
   plug :match
   plug :dispatch
 
@@ -12,5 +14,5 @@ defmodule Botiful do
     send_resp(conn, :ok, "world")
   end
 
-  match(_, do: send_resp(conn, :not_found, "not found"))
+  match(_, do: send_resp(conn, :not_found, "oh no!"))
 end

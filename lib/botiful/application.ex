@@ -5,12 +5,18 @@ defmodule Botiful.Application do
 
   use Application
 
+  require Logger
+
+  @port 8080
+
   def start(_type, _args) do
     children = [
-      {Plug.Adapters.Cowboy2, scheme: :http, plug: Botiful, options: [port: 8080]}
+      {Plug.Adapters.Cowboy2, scheme: :http, plug: Botiful, options: [port: @port]}
       # Starts a worker by calling: Botiful.Worker.start_link(arg)
       # {Botiful.Worker, arg}
     ]
+
+    Logger.info("Listening on port: #{@port}...")
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
