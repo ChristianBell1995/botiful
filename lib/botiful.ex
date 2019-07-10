@@ -10,7 +10,7 @@ defmodule Botiful do
   plug Plug.Static,
     at: "/",
     from: {:botiful, "priv/static"},
-    only: ~w{index.html}
+    only: ~w{index.html javascripts stylesheets assets}
 
   plug :match
   plug :dispatch

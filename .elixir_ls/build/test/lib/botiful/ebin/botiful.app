@@ -1,5 +1,6 @@
 {application,botiful,
-             [{applications,[kernel,stdlib,elixir,logger]},
+             [{applications,[kernel,stdlib,elixir,cowboy,plug,logger,
+                             plug_cowboy]},
               {description,"botiful"},
               {modules,['Elixir.Botiful','Elixir.Botiful.Application']},
               {registered,[]},
