@@ -12,6 +12,8 @@ defmodule Botiful do
     from: {:botiful, "priv/static"},
     only: ~w{index.html javascripts stylesheets assets}
 
+  plug Botiful.AgentPlug
+
   plug :match
   plug :dispatch
 

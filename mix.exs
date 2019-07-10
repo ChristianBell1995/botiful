@@ -25,9 +25,15 @@ defmodule Botiful.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      # Web request
       {:cowboy, "~> 2.5.0"},
       {:plug, "~> 1.6"},
       {:plug_cowboy, "~> 2.0"},
+      {:browser, "~> 0.4.4"},
+
+      {:chroxy_client, "~> 0.1.0"},
+      {:chrome_remote_interface, "~> 0.1.0"},
+      # Development
       {:remix, "~> 0.0.2", only: :dev},
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
